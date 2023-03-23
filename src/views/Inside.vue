@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Showpad } from '@showpad/experience-app-sdk'
 import { onBeforeMount, ref } from 'vue'
 import { FruitPDF, errorHandler, openPDF, readFruitPDFs } from '../utils'
 
@@ -21,24 +22,24 @@ const readInsideFruits = async () => {
   isLoading.value = false
 }
 
-// async function getFruitPdfs() {
-//   // Destructure assets
-//   // Showpad.parseEnrichConfig() method
-//   const { assets } = await Showpad.parseEnrichedConfig<Config>();
+async function getFruitPdfs() {
+  // Destructure assets
+  // Showpad.parseEnrichConfig() method
+  const { assets } = await Showpad.parseEnrichedConfig<Config>();
 
-//   return fruits.map((fruit) => {
-//     const assetConfig = Object.values(assets).find(
-//       (asset) => asset.displayName === fruit,
-//     )
-//     return {
-//       name: fruit,
-//       fileUrl: assetConfig ? buildFileUrl(assetConfig) : '',
-//       previewUrl: assetConfig?.previewUrl || '',
-//     }
-//   })
-// }
+  return fruits.map((fruit) => {
+    const assetConfig = Object.values(assets).find(
+      (asset) => asset.displayName === fruit,
+    )
+    return {
+      name: fruit,
+      fileUrl: assetConfig ? buildFileUrl(assetConfig) : '',
+      previewUrl: assetConfig?.previewUrl || '',
+    }
+  })
+}
 
-// const FRUIT_PDFS: Promise<FruitPDF[]> = getFruitPdfs()
+const FRUIT_PDFS: Promise<FruitPDF[]> = getFruitPdfs()
 
 // LIFECYCLE
 onBeforeMount(readInsideFruits)
