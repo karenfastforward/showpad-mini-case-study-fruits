@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "labels": {},
+  "contents": {
+    "assets": {
+      "Blueberries": {
+        "type": "asset",
+        "value": [
+          "a3e72bbfae0b87381106b1beb685ea88"
+        ]
+      },
+      "Cranberries": {
+        "type": "asset",
+        "value": [
+          "19b28c3089e1d4e477bc38393cdd073d"
+        ]
+      },
+      "Grapes": {
+        "type": "asset",
+        "value": [
+          "74d51a49c063fdf8a4ef6c5be4c032fc"
+        ]
+      },
+      "Pomegranates": {
+        "type": "asset",
+        "value": [
+          "b31f42f161f489cd56dc829cb8c8a7e8"
+        ]
+      }
+    }
+  }
+}

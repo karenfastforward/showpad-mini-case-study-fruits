@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "labels": {},
+  "contents": {
+    "tagged_media": {
+      "media_item": { 
+        "type": "tags", 
+        "value": [
+          "Fruit"
+        ]
+      }
+    }
+}
+}
