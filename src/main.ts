@@ -1,3 +1,4 @@
+import { Showpad } from '@showpad/experience-app-sdk';
 import { createApp } from 'vue'
 import Antd from 'ant-design-vue'
 
@@ -6,10 +7,15 @@ import App from './App.vue'
 import 'ant-design-vue/dist/antd.less'
 
 const main = async (): Promise<void> => {
-  const app = createApp(App)
+  await Showpad.onShowpadLibLoaded();
 
-  app.use(Antd)
-  app.mount('#app')
-}
+  try {
+    const app = createApp(App)
+    app.use(Antd)
+    app.mount('#app')
+  } catch (error) {
+    Showpad.handleErrorWithToast(error);
+  }
+};
 
 main()
