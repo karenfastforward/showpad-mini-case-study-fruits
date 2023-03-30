@@ -11,10 +11,8 @@ export const readFruitPDFs = async (): Promise<FruitPDF[]> => {
   }
   try {
     const { assets: fruitAssets } = await Showpad.parseEnrichedConfig<Config>()
-    console.log(fruitAssets)
     const FRUIT_PDFS = []
     for (const asset in fruitAssets) {
-      console.log(fruitAssets[asset].displayName)
       let fruitName = <Fruit> fruitAssets[asset].displayName
       FRUIT_PDFS.push(
         {
@@ -25,7 +23,6 @@ export const readFruitPDFs = async (): Promise<FruitPDF[]> => {
         }
       )
     }
-    console.log(FRUIT_PDFS)
     return FRUIT_PDFS
   } catch (error) {
     errorHandler(error)
