@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Showpad } from '@showpad/experience-app-sdk'
 import { onBeforeMount, ref } from 'vue'
 import { FruitPDF, errorHandler, openPDF, readFruitPDFs } from '../utils'
 
@@ -22,32 +21,6 @@ const readInsideFruits = async () => {
   isLoading.value = false
 }
 
-async function openFruitPdf(assetSlug) {
-  try {
-    await Showpad.openAssetViewer(assetSlug)
-  } catch {
-    Showpad.handleErrorWithToast(error);
-  }
-}
-
-// async function getFruitPdfs() {
-//   const { assets } = await Showpad.parseEnrichedConfig<Config>();
-//   console.log(assets)
-//   //what is fruits?
-//   return fruits.map((fruit) => {
-//     const assetConfig = Object.values(assets).find(
-//       (asset) => asset.displayName === fruit,
-//     )
-//     return {
-//       name: fruit,
-//       fileUrl: assetConfig ? buildFileUrl(assetConfig) : '',
-//       previewUrl: assetConfig?.previewUrl || '',
-//     }
-//   })
-// }
-
-// const FRUIT_PDFS: Promise<FruitPDF[]> = getFruitPdfs()
-
 // LIFECYCLE
 onBeforeMount(readInsideFruits)
 </script>
@@ -66,7 +39,7 @@ onBeforeMount(readInsideFruits)
         :md="6"
         :lg="4"
       >
-        <a-card @click="openFruitPdf(fruitPDF.slug)" style="cursor: pointer">
+        <a-card @click="openPDF(fruitPDF.slug)" style="cursor: pointer">
           <template #cover>
             <a-image :preview="false" :src="fruitPDF.previewUrl"></a-image>
           </template>
