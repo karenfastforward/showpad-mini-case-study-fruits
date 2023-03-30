@@ -40,3 +40,27 @@ There is a button to generate a PDF document that downloads to the user's device
 
 **Super Fruit Inc requests:**
 We want our clients to live in a database that syncs across the devices of our sales teams. When our app generates a PDF upload, it will be stored in Showpad instead of getting misplaced or forgotten on the user's local device storage.
+
+
+## Specific Objectives
+
+- Best Practices (33%) - 5 pts
+  - [ ] (4 pts) Code quality (below points are attention points to grade upon)
+  - [x] Assets (pdfs, images) are removed from the bundle
+  - [x] Circumventing the Client Interface problem (Scalar)
+  - [x] Using an interface to type ConfigJSON
+  - [x] Upload the 4 PDF documents in the Showpad Library.
+  - [x] (1 pt) Tag exists on PDF documents
+- Experience App CLI (20%)  - 3 pts
+  - [x] (1 pt) Experience App CLI is installed
+  - [x] (1 pt) Experience App Proxy is installed
+  - [x] (1 pt) Application is deployed on Showpad
+- Experience App SDK (33%)  - 5 pts
+  - [x] (1 pt) `openAssetViewer()` is used (Asset opens in asset viewer)
+  - [ ] (1 pt) `getStoreEntries()` is used 
+  - [ ] (1 pt) `setStoreEntryValue()` is used 
+  - [ ] (1 pt) `deleteStoreEntry()` is used
+  - [ ] (1 pt) `upload()` is used
+- Experience App Editor (14%)  - 2 pts
+  - [x] (1 pt) Tags content type is used
+  - [x] (1 pt) parseEnrichedConfig() is used
