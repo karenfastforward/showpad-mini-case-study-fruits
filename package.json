@@ -3,13 +3,14 @@
   "description": "Showpad Mini Case Study - Fruits",
   "author": "Karen Wong",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "serve": "vite preview",
-    "proxy": "yarn experience-app-cli proxy"
+    "proxy": "yarn experience-app-cli proxy",
+    "sync": "yarn experience-app-cli sync"
   },
   "dependencies": {
     "@ant-design/icons-vue": "6.1.0",
