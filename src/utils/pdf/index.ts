@@ -16,3 +16,33 @@ export const sharePDF = async (client: Client): Promise<void> => {
 
   openPDF(pdfUrl)
 }
+
+export const uploadPDF = async (file: Blob, client: Client): Promise<void> => {
+  const filename = client.name
+  const uploadData: Showpad.UploadData = {
+    file,
+    filename
+  }
+
+  const emitter = await Showpad.upload(uploadData)
+
+  emitter.on('queued', async () => {
+    console.log('queued')
+  })
+
+  emitter.on('uploading', (result: Showpad.UploadProgress) => {
+    console.log(result)
+  })
+
+  emitter.on('processing', () => {
+    console.log('processing')
+  })
+
+  emitter.on('success', ({ asset: result }: { asset: Showpad.Asset }) => {
+    console.log(result)
+  })
+
+  emitter.on('failed', (result: Showpad.UploadError) => {
+    console.log(result)
+  })
+}

@@ -57,9 +57,9 @@ We want our clients to live in a database that syncs across the devices of our s
   - [x] (1 pt) Application is deployed on Showpad
 - Experience App SDK (33%)  - 5 pts
   - [x] (1 pt) `openAssetViewer()` is used (Asset opens in asset viewer)
-  - [ ] (1 pt) `getStoreEntries()` is used 
-  - [ ] (1 pt) `setStoreEntryValue()` is used 
-  - [ ] (1 pt) `deleteStoreEntry()` is used
+  - [x] (1 pt) `getStoreEntries()` is used 
+  - [x] (1 pt) `setStoreEntryValue()` is used 
+  - [x] (1 pt) `deleteStoreEntry()` is used
   - [ ] (1 pt) `upload()` is used
 - Experience App Editor (14%)  - 2 pts
   - [x] (1 pt) Tags content type is used

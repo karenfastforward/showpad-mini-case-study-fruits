@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { Showpad } from '@showpad/experience-app-sdk';
 import { onBeforeMount, ref } from 'vue'
 import { TableColumnType } from 'ant-design-vue'
+// import { getShowpadInstance } from '../main.ts'
 
 import {
   Client,
