@@ -1,4 +1,3 @@
-import { Showpad } from '@showpad/experience-app-sdk'
 import { PDFDocument, PDFPage } from 'pdf-lib'
 
 import { Client } from '../clients'

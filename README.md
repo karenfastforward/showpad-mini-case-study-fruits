@@ -45,7 +45,7 @@ We want our clients to live in a database that syncs across the devices of our s
 ## Specific Objectives
 
 - Best Practices (33%) - 5 pts
-  - [ ] (4 pts) Code quality (below points are attention points to grade upon)
+  - [x] (4 pts) Code quality (below points are attention points to grade upon)
   - [x] Assets (pdfs, images) are removed from the bundle
   - [x] Circumventing the Client Interface problem (Scalar)
   - [x] Using an interface to type ConfigJSON
@@ -60,7 +60,7 @@ We want our clients to live in a database that syncs across the devices of our s
   - [x] (1 pt) `getStoreEntries()` is used 
   - [x] (1 pt) `setStoreEntryValue()` is used 
   - [x] (1 pt) `deleteStoreEntry()` is used
-  - [ ] (1 pt) `upload()` is used
+  - [x] (1 pt) `upload()` is used
 - Experience App Editor (14%)  - 2 pts
   - [x] (1 pt) Tags content type is used
   - [x] (1 pt) parseEnrichedConfig() is used

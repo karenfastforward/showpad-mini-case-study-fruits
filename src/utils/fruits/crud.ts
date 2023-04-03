@@ -1,6 +1,5 @@
 import { Showpad } from '@showpad/experience-app-sdk'
 import { FruitPDF } from './types'
-import { errorHandler } from '../error'
 import { Fruit } from './types'
 
 export const readFruitPDFs = async (): Promise<FruitPDF[]> => {
@@ -25,7 +24,7 @@ export const readFruitPDFs = async (): Promise<FruitPDF[]> => {
     }
     return FRUIT_PDFS
   } catch (error) {
-    errorHandler(error)
+    Showpad.handleErrorWithToast(error);
     return []
   }
 }

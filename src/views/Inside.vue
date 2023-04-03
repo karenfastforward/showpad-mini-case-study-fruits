@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { Showpad } from '@showpad/experience-app-sdk'
 import { onBeforeMount, ref } from 'vue'
-import { FruitPDF, errorHandler, openPDF, readFruitPDFs } from '../utils'
+import { FruitPDF, openPDF, readFruitPDFs } from '../utils'
 
 import Loading from '../components/Loading.vue'
 
@@ -15,7 +16,7 @@ const readInsideFruits = async () => {
   try {
     fruitPDFs.value = await readFruitPDFs()
   } catch (error) {
-    errorHandler(error)
+    Showpad.handleErrorWithToast(error);
   }
 
   isLoading.value = false
