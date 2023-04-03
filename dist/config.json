@@ -1,6 +1,12 @@
 {
   "version": 1,
-  "labels": {},
+  "labels": {
+    "settings": {
+      "clientId": "NzBmMzQ1ZWVhMzczNWQ4MmE4ZTlkNjRjZjRhOTZjMjIwMTUwMTIyYw==",
+      "clientSecret": "ab1bcb86d866d446345d58139f3b7a58e7a8b533",
+      "allowedEmails": "karen@fastforward.sh"
+    }
+  },
   "contents": {
     "tagged_media": {
       "media_item": { 
